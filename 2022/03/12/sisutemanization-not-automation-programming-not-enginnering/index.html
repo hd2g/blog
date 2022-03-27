@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>自動化ではなくシステム化、エンジニアリングではなくプログラミング</title>
+  
+  <link rel="canonical" href="https://hd2g.github.io/blog/2022/03/12/sisutemanization-not-automation-programming-not-enginnering/">
+  
+  <meta name="description" content="はじめに注意書きタイトルや、この後の文章について、自動化やシステムエンジニア、その他すべてに対しての批判の意図は全く無い。システム会社(SIer(?))にて仕事をさせて頂く中で愚痴感じたことを書きなぐったポエム的な読み物と捉えて頂きたい。私の経験や感想であって、誰かを否定するものではない。あくまで、">
+  
+  
+  <meta name="author" content="hd2g">
+  
+  <meta property="og:image" content="https://hd2g.github.io/blogundefined">
+  
+  <meta property="og:site_name" content="Plage" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="自動化ではなくシステム化、エンジニアリングではなくプログラミング" />
+  
+  <meta property="og:description" content="はじめに注意書きタイトルや、この後の文章について、自動化やシステムエンジニア、その他すべてに対しての批判の意図は全く無い。システム会社(SIer(?))にて仕事をさせて頂く中で愚痴感じたことを書きなぐったポエム的な読み物と捉えて頂きたい。私の経験や感想であって、誰かを否定するものではない。あくまで、">
+  
+  <meta property="og:url" content="https://hd2g.github.io/blog/2022/03/12/sisutemanization-not-automation-programming-not-enginnering/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="自動化ではなくシステム化、エンジニアリングではなくプログラミング">
+  
+  <meta name="twitter:description" content="はじめに注意書きタイトルや、この後の文章について、自動化やシステムエンジニア、その他すべてに対しての批判の意図は全く無い。システム会社(SIer(?))にて仕事をさせて頂く中で愚痴感じたことを書きなぐったポエム的な読み物と捉えて頂きたい。私の経験や感想であって、誰かを否定するものではない。あくまで、">
+  
+  
+  <meta name="twitter:image" content="https://hd2g.github.io/blogundefined">
+  
+  <meta name="twitter:url" content="https://hd2g.github.io/blog/2022/03/12/sisutemanization-not-automation-programming-not-enginnering/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="../fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/blog/css/normalize.css">
+
+  
+<link rel="stylesheet" href="/blog/css/skeleton.css">
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+  
+<link rel="stylesheet" href="/blog/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/blog/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/blog/css/user.css">
+
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/logo2.png">
+
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+</style>
+
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+
+        <div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h1 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
+  </div>
+
+  <div class="six columns ml-1">
+    <h1 class="mt-2">
+      <a href="/blog/">Plage</a>
+    </h1>
+  </div>
+
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        
+        
+        
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+            <h2>自動化ではなくシステム化、エンジニアリングではなくプログラミング</h2>
+
+  <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p><strong>注意書き</strong><br>タイトルや、この後の文章について、自動化やシステムエンジニア、その他すべてに対しての批判の意図は全く無い。<br>システム会社(SIer(?))にて仕事をさせて頂く中で<del>愚痴</del>感じたことを書きなぐったポエム的な読み物と捉えて頂きたい。<br>私の経験や感想であって、誰かを否定するものではない。<br>あくまで、私の感想だ。(ひろy)</p>
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><ul>
+<li><a href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</a></li>
+<li><a href="#%E8%87%AA%E5%8B%95%E5%8C%96%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%8F%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%8C%96">自動化ではなくシステム化</a><ul>
+<li><a href="#%E3%81%9D%E3%81%AE%E5%A0%B4%E3%81%97%E3%81%AE%E3%81%8E%E3%81%AA%E8%87%AA%E5%8B%95%E5%8C%96%E3%81%A8%E3%83%84%E3%83%BC%E3%83%AB%E4%BD%9C%E6%88%90">その場しのぎな「自動化」と「ツール作成」</a></li>
+<li><a href="#%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%AE%E8%AA%8D%E8%AD%98%E3%81%AF%E8%87%AA%E5%8B%95%E5%8C%96%E3%83%84%E3%83%BC%E3%83%AB%E3%81%8B%E3%82%89%E6%A5%AD%E5%8B%99%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8">いつの間にか、お客様の認識は「自動化ツール」から「業務システム」へ</a></li>
+<li><a href="#%E7%B5%90%E5%B1%80%E8%AB%8B%E3%81%91%E5%81%B4%E3%81%8C-%E4%BA%BA%E5%8A%9B--%E3%82%B9%E3%82%AD%E3%83%AB--%E6%99%82%E9%96%93-%E3%81%A7%E3%82%B4%E3%83%AA%E6%8A%BC%E3%81%97%E3%81%99%E3%82%8B%E7%B2%BE%E7%A5%9E%E8%AB%96%E7%9A%84%E8%A7%A3%E6%B1%BA%E6%B3%95%E3%81%B8">結局、請け側が 人力 + スキル + 時間 でゴリ押しする精神論的解決法へ</a></li>
+<li><a href="#%E4%BB%8A%E6%A5%BD%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%9F%E3%81%84--%E6%95%B0%E3%83%B6%E6%9C%88%E5%BE%8C%E3%81%A9%E3%81%86%E3%81%82%E3%82%8A%E3%81%9F%E3%81%84%E3%81%8B">今、楽になりたい &gt;&gt;&gt; 数ヶ月後、どうありたいか</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E8%AB%96%E3%82%88%E3%82%8A%E3%82%82%E3%81%BE%E3%81%9A%E5%8E%9F%E7%90%86%E5%8E%9F%E5%89%87">方法論よりもまず原理原則</a></li>
+</ul>
+</li>
+<li><a href="#%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%8F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">エンジニアリングではなくプログラミング</a><ul>
+<li><a href="#%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%8C%E8%A1%8C%E3%81%86%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0">“エンジニア”が行う”エンジニアリング”</a></li>
+<li><a href="#%E9%9B%BB%E8%BB%8A%E3%81%A8%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%81%A9%E3%81%A1%E3%82%89%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E3%81%8B">電車とタクシーどちらを利用するか</a></li>
+<li><a href="#%E8%AA%B0%E3%81%AE%E7%82%BA%E3%81%AE%E3%82%B9%E3%82%AD%E3%83%AB%E8%A1%8C%E4%BD%BF%E3%81%8B">誰の為のスキル行使か</a></li>
+</ul>
+</li>
+<li><a href="#%E8%B6%A3%E5%91%B3%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E7%B5%90%E6%9E%9C%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0">趣味としてのプログラミング、結果としてのエンジニアリング</a></li>
+<li><a href="#%E8%A6%81%E3%81%99%E3%82%8B%E3%81%AB">要するに</a></li>
+</ul>
+<!-- markdown-toc end -->
+
+</br>
+</br>
+</br>
+
+<h2 id="自動化ではなくシステム化"><a href="#自動化ではなくシステム化" class="headerlink" title="自動化ではなくシステム化"></a>自動化ではなくシステム化</h2><h3 id="その場しのぎな「自動化」と「ツール作成」"><a href="#その場しのぎな「自動化」と「ツール作成」" class="headerlink" title="その場しのぎな「自動化」と「ツール作成」"></a>その場しのぎな「自動化」と「ツール作成」</h3><ul>
+<li>Excelマクロツールによって便利になる現場業務</li>
+<li>ツールはあくまでツール、システムではない</li>
+<li>システム化されていない作業を自動化し続けることのリスク</li>
+<li></li>
+</ul>
+<h3 id="いつの間にか、お客様の認識は「自動化ツール」から「業務システム」へ"><a href="#いつの間にか、お客様の認識は「自動化ツール」から「業務システム」へ" class="headerlink" title="いつの間にか、お客様の認識は「自動化ツール」から「業務システム」へ"></a>いつの間にか、お客様の認識は「自動化ツール」から「業務システム」へ</h3><ul>
+<li>自動化ツールへの過度な要求</li>
+<li>システム化せず、自動化ツールを増やしつづける</li>
+<li>いつのまにか、複数の複雑な自動化ツール群が、業務システムとなる</li>
+<li>自動化ツールの自動操作の連鎖はシステムとはならない</li>
+</ul>
+<h3 id="結局、請け側が-人力-スキル-時間-でゴリ押しする精神論的解決法へ"><a href="#結局、請け側が-人力-スキル-時間-でゴリ押しする精神論的解決法へ" class="headerlink" title="結局、請け側が 人力 + スキル + 時間 でゴリ押しする精神論的解決法へ"></a>結局、請け側が 人力 + スキル + 時間 でゴリ押しする精神論的解決法へ</h3><ul>
+<li>お客様はツールに人間と同等以上の速度、正確性、柔軟性を短納期で求める</li>
+<li>過度な要求に対応するため、スキルと時間を必要以上に投下する</li>
+<li>納期に対応するため、不足している機能や要求は人力(手動作業)でなんとかする</li>
+</ul>
+<h3 id="今、楽になりたい-gt-gt-gt-数ヶ月後、どうありたいか"><a href="#今、楽になりたい-gt-gt-gt-数ヶ月後、どうありたいか" class="headerlink" title="今、楽になりたい &gt;&gt;&gt; 数ヶ月後、どうありたいか"></a>今、楽になりたい &gt;&gt;&gt; 数ヶ月後、どうありたいか</h3><ul>
+<li>設計無き自動化ツールは今楽になれる</li>
+<li>途中で振り返って、今一度設計からやり直すと、以降楽になれる</li>
+<li>定期的に振り返って、現状を検討し直す- </li>
+</ul>
+<h3 id="方法論よりもまず原理原則"><a href="#方法論よりもまず原理原則" class="headerlink" title="方法論よりもまず原理原則"></a>方法論よりもまず原理原則</h3><ul>
+<li>無闇にExcelツールだのRPAだのに手を出すと業務、システムが成長しない</li>
+<li>業務がどうあるべきか、どうあって欲しいかを具体的に想像する</li>
+<li>データを中心に考えれば、手順は自然に最適化できる</li>
+</ul>
+<h2 id="エンジニアリングではなくプログラミング"><a href="#エンジニアリングではなくプログラミング" class="headerlink" title="エンジニアリングではなくプログラミング"></a>エンジニアリングではなくプログラミング</h2><h3 id="“エンジニア”が行う”エンジニアリング”"><a href="#“エンジニア”が行う”エンジニアリング”" class="headerlink" title="“エンジニア”が行う”エンジニアリング”"></a>“エンジニア”が行う”エンジニアリング”</h3><ul>
+<li>エンジニアリング(工学)が都合よく使われる</li>
+<li>エンジニアリングがエンジニア自身のためにもならないなら、報われることはない</li>
+</ul>
+<h3 id="電車とタクシーどちらを利用するか"><a href="#電車とタクシーどちらを利用するか" class="headerlink" title="電車とタクシーどちらを利用するか"></a>電車とタクシーどちらを利用するか</h3><ul>
+<li>電車はノーコードやRPA</li>
+<li>タクシーはシステム開発</li>
+<li>組み合わせることで、質の良い効率的な行動ができる</li>
+</ul>
+<h3 id="誰の為のスキル行使か"><a href="#誰の為のスキル行使か" class="headerlink" title="誰の為のスキル行使か"></a>誰の為のスキル行使か</h3><ul>
+<li>特定の誰かのためだけのスキル行使は非効率的</li>
+<li>自身のスキルアップが伴わないスキル行使は非生産的<ul>
+<li>つまり同じような行為の繰り返し</li>
+</ul>
+</li>
+</ul>
+<h2 id="趣味としてのプログラミング、結果としてのエンジニアリング"><a href="#趣味としてのプログラミング、結果としてのエンジニアリング" class="headerlink" title="趣味としてのプログラミング、結果としてのエンジニアリング"></a>趣味としてのプログラミング、結果としてのエンジニアリング</h2><ul>
+<li>プログラミングを行うことは楽しい</li>
+<li>楽しんで生み出されたものを、誰かの為に有効活用できないか考える</li>
+<li>結果的にエンジニアリングになる</li>
+</ul>
+<h2 id="要するに"><a href="#要するに" class="headerlink" title="要するに"></a>要するに</h2><p>楽しんでプログラミングしたい</p>
+
+  <p> — 2022年3月12日</p>
+  
+
+
+          <div class="row mt-2">
+  
+</div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src=""></script>
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+</body>
+
+</html>
